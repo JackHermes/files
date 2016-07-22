@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>WikiLeaks </title>
+</head>
+
+<style>
+body{
+    margin-top:50px;}
+.menuBar{
+    width:100%;
+    height:30px;
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    }
+.logo{
+    float:left;
+
+    }
+/*.nav{
+  float:right;
+    margin-right:10px;}
+.nav ul li{
+    list-style:none;
+    float:left;
+    }
+*/
+
+.navbar{
+  position:fixed;
+  background-color: white;
+  width: 100%;
+  top: 0;
+  
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+</style>
+
+
+
+  <body>
+    <div id='main'>
+
+      <div>
+      <nav class="navbar">
+            <a href="#menu" class="mobile-only hot-dog nav-element">
+            </a>
+          <div class="nav-logo">
+            <img class="logo" src="Wikileaks_logo_text_wordmark.png"/ width='150px' height='110px'>
+            <a href="https://wikileaks.org">
+
+            </a>
+          </div>
+          <div class="action-buttons">
+            <a class="button-face support-link" href="https://wikileaks.spreadshirt.com/" target="_blank">Shop</a>
+            <a class="button-face donate-link" href="https://shop.wikileaks.org/donate">Donate</a>
+            <a class="button-face submit-link" href="#submit">Submit</a>
+          </div>
+
+          <div class="main-nav">
+
+              <ul class="first-level">
+
+                  <li>
+                    <a class=" leaks-menu-item" href="https://wikileaks.org/-Leaks-.html">Leaks</a>
+                  </li>
+
+                  <li>
+                    <a class=" news-menu-item" href="https://wikileaks.org/-News-.html">News</a>
+                  </li>
+
+                  <li>
+                    <a class=" about-menu-item" href="https://wikileaks.org/-About-66-.html">About</a>
+                  </li>
+
+                  <li>
+                    <a class=" partners-menu-item" href="https://wikileaks.org/-Partners-.html">Partners</a>
+                  </li>
+
+              </ul>
+
+
+            <!--  <div class="action-buttons">
+          <a class="button-face support-link" href="https://wikileaks.spreadshirt.com/" target="_blank">Shop</a>
+          <a class="button-face donate-link" href="https://shop.wikileaks.org/donate">Donate</a>
+          <a class="button-face submit-link" href="#submit">Submit</a>
+        </div>
+      -->
+          </div>
+        </nav>
+
+      </div>
+
+    <!-- <div class="menuBar">
+            <img class="logo" src="Wikileaks_logo_text_wordmark.png"/ width='135px' height='110px'>
+            <div class="nav">
+              <ul class="topnav" id="myTopnav">
+                <li><a href="#leaks">Leaks</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#partners">Partners</a></li>
+                  <li class="icon">
+                    <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+                  </li>
+              </ul>
+
+            </div>
+        </div>
+
+-->
+
+
+
+
+
+
+    <div id='topicMenus'>
+
+<ul>
+  <li><a href="#">Intelligence</a></li>
+  <li><a href="#">Global Economy</a></li>
+  <li><a href="#">International Politics</a></li>
+  <li><a href="#">Corporations</a></li>
+  <li><a href="#">Government</a></li>
+  <li><a href='#'>War and Military</a></li>
+</ul>
+    </div>
+    <form class="global-search" method="get" action="https://search.wikileaks.org/">
+      <input type="text" name="q" placeholder="Search">
+      <button class="btn-search" type="submit"></button>
+    </form>
+
+
+    <h1>Featured </h1>
+
+    <div id='contents'>
+
+
+    </div>
+
+</div>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+    <script>
+
+
+    for(var i =0; i < 7; i++){
+      $('#contents').append('<div> </div>');
+    }
+
+    var contentLength = $("#contents").children().length;
+
+    var idDataBase = [];
+
+    for(var i = 0; i<100; i++){
+      idDataBase.push(toString(i));
+    }
+
+
+    for(var i = 0; i<contentLength; i++ ){
+      jQuery(this).prev("div").attr("id",idDataBase[i]);
+    }
+
+
+    </script>
+
+<!--
+
+
+
+
+
+
+
+-->
+
+
+  </body>
+
+
+
+
+
+</html>
