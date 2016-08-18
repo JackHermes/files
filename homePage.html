@@ -6,47 +6,58 @@
 </head>
 
 <style>
-body{
-    margin-top:50px;}
-.menuBar{
-    width:100%;
-    height:30px;
-    display:block;
+  .main-nav{
+      width:40%;
+      position:absolute;
+      left:0;
+  }
+
+  .navbar{
+    width: 100%;
+    top: 0px;
+    padding-top:10px;
+    height:80px;
+  }
+
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display:flex;
+  }
+  li{
+    flex:1;
+  }
+
+  li a{
+    color:#333;
+    text-decoration: none;
+  }
+  .action-buttons{
     position:absolute;
-    top:0;
-    left:0;
-    }
-.logo{
-    float:left;
+    right:20px;
+    width:20%;
+  }
 
-    }
-/*.nav{
-  float:right;
-    margin-right:10px;}
-.nav ul li{
-    list-style:none;
-    float:left;
-    }
-*/
+  #topic-menus{
+    text-align: center;
+  }
+  .global-search{
+    margin: 0 auto;
+    padding-top:10px;
+    padding-bottom:10px;
+  }
 
-.navbar{
-  position:fixed;
-  background-color: white;
-  width: 100%;
-  top: 0;
-  
+  .global-search input{
+    padding:10px;
+    width:50%;
+  }
 
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-
-
-
+  ul.topics{
+    margin: 0 auto;
+    padding-top:50px;
+    width:80%;
+  }
 </style>
 
 
@@ -58,16 +69,19 @@ ul {
       <nav class="navbar">
             <a href="#menu" class="mobile-only hot-dog nav-element">
             </a>
-          <div class="nav-logo">
-            <img class="logo" src="Wikileaks_logo_text_wordmark.png"/ width='150px' height='110px'>
-            <a href="https://wikileaks.org">
 
-            </a>
-          </div>
           <div class="action-buttons">
-            <a class="button-face support-link" href="https://wikileaks.spreadshirt.com/" target="_blank">Shop</a>
-            <a class="button-face donate-link" href="https://shop.wikileaks.org/donate">Donate</a>
-            <a class="button-face submit-link" href="#submit">Submit</a>
+            <ul>
+              <li>      <div class="nav-logo">
+                      <a href="https://wikileaks.org">
+                        <img goes here>
+                      </a>
+                    </div></li>
+
+            <li><a class="button-face support-link" href="https://wikileaks.spreadshirt.com/" target="_blank">Shop</a></li>
+            <li><a class="button-face donate-link" href="https://shop.wikileaks.org/donate">Donate</a></li>
+            <li><a class="button-face submit-link" href="#submit">Submit</a></li>
+          </ul>
           </div>
 
           <div class="main-nav">
@@ -92,66 +106,38 @@ ul {
 
               </ul>
 
-
-            <!--  <div class="action-buttons">
-          <a class="button-face support-link" href="https://wikileaks.spreadshirt.com/" target="_blank">Shop</a>
-          <a class="button-face donate-link" href="https://shop.wikileaks.org/donate">Donate</a>
-          <a class="button-face submit-link" href="#submit">Submit</a>
-        </div>
-      -->
           </div>
         </nav>
 
       </div>
 
-    <!-- <div class="menuBar">
-            <img class="logo" src="Wikileaks_logo_text_wordmark.png"/ width='135px' height='110px'>
-            <div class="nav">
-              <ul class="topnav" id="myTopnav">
-                <li><a href="#leaks">Leaks</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#partners">Partners</a></li>
-                  <li class="icon">
-                    <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
-                  </li>
-              </ul>
+      <div id='topic-menus'>
 
-            </div>
-        </div>
+        <form class="global-search" method="get" action="https://search.wikileaks.org/">
+          <input type="text" name="q" placeholder="Search">
+          <button class="btn-search" type="submit"></button>
+        </form>
 
--->
-
+        <ul class = "topics">
+          <li><a href="#">Intelligence</a></li>
+          <li><a href="#">Global Economy</a></li>
+          <li><a href="#">International Politics</a></li>
+          <li><a href="#">Corporations</a></li>
+          <li><a href="#">Government</a></li>
+          <li><a href='#'>War and Military</a></li>
+        </ul>
+      </div>
 
 
 
+      <h1>Featured </h1>
+
+      <div id='contents'>
 
 
-    <div id='topicMenus'>
-
-<ul>
-  <li><a href="#">Intelligence</a></li>
-  <li><a href="#">Global Economy</a></li>
-  <li><a href="#">International Politics</a></li>
-  <li><a href="#">Corporations</a></li>
-  <li><a href="#">Government</a></li>
-  <li><a href='#'>War and Military</a></li>
-</ul>
-    </div>
-    <form class="global-search" method="get" action="https://search.wikileaks.org/">
-      <input type="text" name="q" placeholder="Search">
-      <button class="btn-search" type="submit"></button>
-    </form>
-
-
-    <h1>Featured </h1>
-
-    <div id='contents'>
-
+      </div>
 
     </div>
-
-</div>
 
     <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 
