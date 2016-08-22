@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<title> Should I Go There? </title>
+
+<style>
+  body{
+    background: url(weather.png);
+
+  }
+
+  p{
+    margin: auto;
+  }
+
+
+
+</style>
+
+
+
+
+
+
+<body>
+
+  <div id='intro'>
+
+    <p>
+      Welcome to ShouldIGo! This is a unique app that finds you the desired destination of your dreams!
+      Ever find yourself wishing for a getaway, but unable to decide where to go?
+      Now with our patented DestinationFinder algorithm technology, we. can. get. you. there!
+
+      So just enter in the features of your dream destination below, and our innovative algorithm will hook it right up.
+    </p>
+
+  </div>
+
+
+  <div id='main'>
+
+    <form action ='#' >
+      Ideal Temperature :<br>
+      <input class='data' type="text" id="temp">
+      <br>
+      Current Location:<br>
+      <br>
+      <input class='data' type="text" id="currentLoc">
+      <br>
+      Maximum Required Distance:<br>
+      <br>
+      <input class='data' type='text' id='maxDist'>
+      <br>
+      Perfered level of Sunshine:<br>
+      <br>
+<select class='data' id='sunshine' multiple>
+  <option value="Always sunny">Always Sunny</option>
+  <option value="Mostly Sunny">Mostly Sunny</option>
+  <option value="Partly Cloudy">Partly Cloudy</option>
+  <option value="Depressingly Cloudy">Depressingly Cloudy</option>
+</select>
+      <br>
+      Ideal Season: <br>
+      <br>
+  <select class='data' id='seasons' multiple>
+    <option value='spring'> Spring</option>
+    <option value='summer'> Summer</option>
+    <option value='fall'> Fall</option>
+    <option value='winter'> Winter</option>
+  </select>
+
+
+
+
+
+      <input type="submit" value="Submit">
+
+
+
+
+    </form>
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <script> src="https://code.jquery.com/jquery-2.1.1.js"</script>
+
+
+
+<script>
+
+
+
+
+
+
+
+
+// TASKS:
+
+// Add rudimentary  user input interface including all primary fields (perfered climate range, distance from loc, estimated travel time (?)...
+
+// ... and a  'advanced' algorithmec determination whether or not they should stay or go based off their information     )
+
+// Add the scaffold of a user interface containing a series of input fields an introduction, and basic presentation and which
+
+//collects the user's data  as properties in an object for processing by the algorithm controller
+
+// Construct (on another related file) an output state presenting the results
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+
+
+
+
+</html>
