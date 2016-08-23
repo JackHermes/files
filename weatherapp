@@ -1,19 +1,13 @@
 <!DOCTYPE HTML>
 
 <html>
-<title> Should I go there? </title>
-
-
-
-
+<head>
+  <title> Should I go there? </title>
+</head>
 <body>
+  <script src='https://code.jquery.com/jquery-2.1.1.js'></script>
+  <script>
 
-
-
+  </script>
 </body>
-
-
-
-
-
 </html>
