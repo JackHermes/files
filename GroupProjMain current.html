@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<title> Should I Go There? </title>
+
+<style>
+
+  body{
+    background: url(weather.png);
+
+  }
+
+  p{
+    margin: auto;
+  }
+
+
+
+</style>
+
+
+
+
+
+
+<body>
+
+  <div id='intro'>
+
+    <p>
+      Welcome to ShouldIGo! This is a unique app that finds you the desired destination of your dreams!
+      Ever find yourself wishing for a getaway, but unable to decide where to go?
+      Now with our patented DestinationFinder algorithm technology, we. can. get. you. there!
+
+      So just enter in the features of your dream destination below, and our innovative algorithm will hook it right up.
+    </p>
+
+  </div>
+
+
+  <div id='main'>
+
+    <form action ='#' >
+      <br>
+      Ideal Temperature(Celcius) :<br>
+      <select class='data' id='humidity' multiple>
+        <option value="cold"> -5 to 5</option>
+        <option value="cool"> 6 to 19</option>
+        <option value="warm"> 20 to 28</option>
+        <option value="hot "> 29 to 35</option>
+      </select>
+
+      <br>
+      Perfered Humidity: <br>
+      <select class='data' id='humidity' multiple>
+        <option value="Low">Low</option>
+        <option value="Mild">Mild</option>
+        <option value="Humid">Humid</option>
+        <option value="Very Humid ">Very Humid</option>
+      </select>
+
+      <br>
+
+      <br>
+
+    <br>  Percipitation: <br>
+
+      <select class='data' id='percipitation' multiple>
+        <option value="none">None</option>
+        <option value="some"> Some </option>
+        <option value="significant">Significant </option>
+
+      </select>
+
+
+
+
+
+
+
+
+      Perfered level of Sunshine:<br>
+      <br>
+<select class='data' id='sunshine' multiple>
+  <option value="Always sunny">Always Sunny</option>
+  <option value="Mostly Sunny">Mostly Sunny</option>
+  <option value="Partly Cloudy">Partly Cloudy</option>
+  <option value="Depressingly Cloudy">Depressingly Cloudy</option>
+</select>
+      <br>
+
+
+
+<input type="submit" value="Submit">
+
+
+
+
+    </form>
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <script> src="https://code.jquery.com/jquery-2.1.1.js"</script>
+
+
+
+<script>
+
+
+function Dest(name, temp, hum, per, sun){
+  this.name = name;
+  this.temp = 0;
+  this.hum  = .00;
+  this.per = .00;
+  this.sun = sun;
+
+}
+
+
+
+var leng = (function Dest(name, temp, hum, per, sun){
+  this.name = name;
+  this.temp = 0;
+  this.hum  = .00;
+  this.per = .00;
+  this.sun = sun;
+
+}.length);
+
+console.log(leng)
+
+var dest1 = new Dest('barcelona', 16, .77, .00,  'partly');
+var dest2 = new Dest('dublin', 13, .87, .00, 'overcast' );
+var dest3 = new Dest('san diego', 21, .81, .00, 'clear');
+
+
+
+
+
+
+
+
+function UserInput(name, temp, hum, per, sun){
+  this.name = name;
+  this.temp = 0;
+  this.hum  = .00;
+  this.per = .00;
+  this.sun = sun;
+}
+
+var input1 = new UserInput('boston', 22, .57, .00, 'partly');
+
+
+
+
+var MockObjDB = {
+
+  d1: dest1,
+
+  d2: dest2,
+
+  d3: dest3,
+
+  user: input1
+
+
+
+};
+
+ function findMatchScore(destination, ideal){
+
+if(for (prop in destination){
+  
+})
+
+   var totalScore = destination.length * 100;
+
+
+
+   var setPointTemp = 100;
+   var setPointHum = Math.round(destination.hum * 100);
+   var setPointPer = Math.round(destination.per *100);
+   var setPointSun;
+
+
+
+
+
+
+   if(destination.sun === 'overcast') setPointSun = 0;
+   else if(destination.sun === 'partly' ) setPointSun = 50;
+   else if (destination.sun === 'mostly sunny') setPointSun = 75;
+   else if(destination.sun === 'clear') setPointSun = 100;
+
+   for(prop in destination){
+     if destination[prop] === ideal[prop] destination[prop] = 0;
+   }
+
+
+   function deductPoints(value){
+     if(value === 100) return value
+
+     else if(value === 0) return 0
+
+     else return 100 - value;
+   }
+
+   var pointRemove = subtactPoints(setPointTemp) + deductPoints(setPointHum) + deductPoints(setPointPer) + deductPoints(setPointSun);
+
+   var baseDiff = totalScore - pointRemove;
+
+   var ideal = input1;
+
+   var idealScore= findMatchScore(ideal);
+
+
+
+
+   if idealScore == findMatchScore(destination) return destination
+
+
+
+
+}
+
+
+
+
+
+
+// TASKS:
+
+// Add rudimentary  user input interface including all primary fields (perfered climate range, distance from loc, estimated travel time (?)...
+
+// ... and a  'advanced' algorithmec determination whether or not they should stay or go based off their information     )
+
+// Add the scaffold of a user interface containing a series of input fields an introduction, and basic presentation and which
+
+//collects the user's data  as properties in an object for processing by the algorithm controller
+
+// Construct (on another related file) an output state presenting the results
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+
+
+
+
+</html>
